@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>CoinIntention - Vivek Rawat</title>
+		<meta name="description" content="" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="styles.css" />
+		<!-- Font cdn -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+			rel="stylesheet"
+		/>
+		<script src="app.js" async defer></script>
+	</head>
+
+	<body>
+		<div class="root">
+			<!-- Navbar starts -->
+			<div class="mobileNav">
+				<div class="mobileNavWrapper">
+					<div class="navlink"><a href="">Cryptocurrencies</a></div>
+					<div class="navlink"><a href="">Exchanges</a></div>
+					<div class="navlink"><a href="">Community</a></div>
+					<div class="navlink"><a href="">Trades</a></div>
+					<button onclick="closeMenu()" class="closeMenu">x</button>
+				</div>
+			</div>
+			<header class="navbar flex-all-center">
+				<div class="navContainer flex-all-between">
+					<div class="navlogo">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="285"
+							height="34"
+							viewBox="0 0 285 34"
+							fill="none"
+						>
+							<path
+								d="M31.423 0.105135C29.9907 0.433327 29.6111 2.36491 31.0004 3.00163C31.901 3.4144 33.2526 3.2474 34.2406 3.42812C36.1671 3.78049 37.9433 4.40773 39.594 5.3828C47.3559 9.96808 48.5992 19.6178 42.6621 25.8967C38.3492 30.4575 30.8133 31.7254 24.9429 29.0597C23.2979 28.3128 21.835 27.2347 20.5796 26.0247C19.7707 25.2448 18.9886 24.1956 17.6172 24.699C14.7763 25.7419 18.6748 28.893 19.7304 29.6853C23.2786 32.3483 28.1832 33.9829 32.8322 33.5627C44.1968 32.5354 51.8509 22.9635 49.4007 12.8464C47.993 7.03222 42.7018 2.09982 36.3539 0.645341C34.9241 0.317716 32.8896 -0.230975 31.423 0.105135ZM0.993189 0.371679C-0.541118 0.876033 -0.180783 2.97924 1.27496 3.32507C2.98756 3.73192 5.28027 3.37838 7.05102 3.37838H19.1669C20.7104 3.37838 23.9323 3.93086 25.213 3.05853C26.2757 2.33473 25.886 0.490629 24.5203 0.318358C22.8053 0.102029 20.8997 0.307697 19.1669 0.307697H3.24729C2.56785 0.307697 1.63854 0.159544 0.993189 0.371679ZM29.4506 7.08874C29.4506 7.87944 29.7859 9.45784 29.3488 10.1487C28.9752 10.7393 27.7648 11.1006 27.1964 11.5774C25.6703 12.8579 24.8015 14.9387 24.8015 16.8125C24.8015 18.7185 25.6721 20.7382 27.1964 22.0546C27.7704 22.5502 28.9433 22.9078 29.3488 23.4975C29.7933 24.1442 29.4506 25.7786 29.4506 26.5362H31.0003L31.1411 23.8494L33.3952 24.1053V26.5362H34.9449V23.8493C36.6065 23.7732 38.0401 22.8295 39.1712 21.8023V21.6743C38.7563 21.2975 38.0884 20.4018 37.4807 20.3237C36.8938 20.2485 36.0496 21.1646 35.5083 21.3864C34.3072 21.8789 32.8156 21.9275 31.5637 21.5855C26.5162 20.206 26.5173 13.4291 31.5637 12.0396C32.8438 11.6871 34.2822 11.7676 35.5083 12.26C36.0479 12.4766 36.898 13.3761 37.4807 13.3014C38.0884 13.2233 38.7563 12.3276 39.1712 11.9508V11.8228C38.0167 10.7788 36.6005 9.93359 34.9449 9.77575V7.08893H33.3952C33.3952 7.65482 33.6959 9.21723 33.0978 9.55543C32.6464 9.81058 31.6801 9.68323 31.1411 9.77577L31.0002 7.08895L29.4506 7.08874ZM64.8114 7.77842C62.8343 8.07351 60.9606 8.43993 59.3171 9.57322C54.7643 12.7126 54.1309 19.5234 58.3427 23.1819C61.678 26.0785 67.1423 26.5494 71.1507 24.5857C71.7021 24.3156 73.5257 23.4054 73.2875 22.6985C73.157 22.3116 72.5892 22.0469 72.2778 21.7922C71.9877 21.5549 71.5838 20.9926 71.1507 20.9926C70.6523 20.9926 70.0143 21.7588 69.601 22.002C68.6409 22.5671 67.4909 22.8416 66.3608 22.9438C61.339 23.3978 57.9837 18.5578 59.5517 14.5101C60.7708 11.3629 64.8192 9.90288 68.1924 10.8885C68.9445 11.1083 70.8874 12.6975 71.4327 12.4168C71.8428 12.2056 73.311 11.1164 73.311 10.6718C73.311 9.99948 71.848 9.27484 71.2918 8.98719C69.441 8.03003 66.9442 7.4601 64.8114 7.77842ZM84.3933 7.7788C82.2702 8.09571 80.3315 8.56823 78.6173 9.82588C74.0577 13.1713 74.0264 19.9408 78.3355 23.4557C80.7974 25.4638 84.3067 26.0482 87.4929 25.613C88.9347 25.4159 90.3521 24.9497 91.5785 24.2304C100.306 19.1116 94.5561 6.26161 84.3933 7.7788ZM252.6 7.77926C250.563 8.08335 248.62 8.48691 246.965 9.69842C242.107 13.2518 242.107 20.247 246.965 23.8005C249.377 25.5653 252.716 26.0208 255.7 25.613C257.082 25.4242 258.472 24.9667 259.644 24.2766C268.315 19.173 262.893 6.24317 252.6 7.77926ZM99.7436 7.98478V25.5134H103.266V7.98478H99.7436ZM108.478 7.98478V25.5134H112V13.7423L119.553 22.0589L122.621 25.421L125.666 25.5133V7.98475H122.144V19.7559L119.741 17.197L114.45 11.3115L111.437 8.07738L108.478 7.98478ZM130.878 7.98498V25.5136H134.4V7.98498H130.878ZM139.613 7.98498V25.5136H143.135V13.7425L150.546 21.9306L153.732 25.4207L156.659 25.5131V7.9845H153.137V19.7556L145.679 11.439L142.567 8.07691L139.613 7.98498ZM159.477 7.98451V10.6713H165.816V25.5131H169.338V14.6381C169.338 13.8448 168.896 11.415 169.526 10.8424C169.875 10.5255 170.719 10.6719 171.17 10.6719H175.819V7.98502L159.477 7.98451ZM178.495 7.98502V25.5136H193.005V22.8268H184.975L182.204 22.6562L182.017 21.4194V17.9649H191.315V15.2781H182.017V12.0795L182.204 10.8427L184.975 10.6722H192.583V7.98537L178.495 7.98502ZM196.951 7.98537V25.514H200.473V13.7429L203.204 16.6856L208.248 22.3152L211.179 25.4214L214.138 25.5138V7.98519H210.616V19.7563L208.212 17.1974L202.594 10.9282L199.909 8.07782L196.951 7.98537ZM216.815 7.98542V10.6722H223.154V25.514H226.817V10.6722H233.157V7.98542H216.815ZM235.833 7.98542V25.514H239.496V7.98542H235.833ZM267.813 7.98542V25.514H271.335V13.7429L274.207 16.8136L279.251 22.4431L282.042 25.4214L285 25.5138V7.98517H281.478V19.7563L273.597 11.0558L270.857 8.07757L267.813 7.98542ZM5.21196 8.81684C3.64296 9.29626 4.02839 11.4345 5.49371 11.7702C6.64598 12.0342 8.11131 11.8235 9.29743 11.8235H17.0458C18.2542 11.8235 20.1951 12.1568 21.2682 11.5782C22.4384 10.9475 22.2324 9.04706 20.8495 8.7848C19.7584 8.57788 18.4421 8.75281 17.3276 8.75281H10.0019C8.5933 8.75281 6.54768 8.40869 5.21196 8.81684ZM84.8084 10.5724C91.3599 9.74607 95.0657 17.9697 89.8801 21.622C88.7902 22.3895 87.4436 22.8205 86.0763 22.9442C80.196 23.4756 76.5379 17.0293 80.0773 12.8474C81.2311 11.4837 82.9799 10.8031 84.8084 10.5724ZM253.015 10.5728C259.321 9.7775 262.835 17.1623 258.639 21.1599C257.485 22.2589 255.77 22.7969 254.142 22.9442C248.522 23.4521 245.057 17.5535 247.857 13.3589C248.988 11.6636 250.931 10.8356 253.015 10.5728ZM9.85689 16.7459C8.49713 17.1213 8.30893 18.9998 9.57512 19.5927C10.1542 19.8638 10.9173 19.7562 11.5475 19.7562C13.1577 19.7562 15.6865 20.1914 17.1826 19.646C18.53 19.1548 18.6245 17.2235 17.1826 16.7495C16.574 16.5494 15.7095 16.6855 15.0694 16.6855C13.5077 16.6855 11.3512 16.3334 9.85689 16.7459Z"
+								fill="#FBC315"
+							/>
+						</svg>
+					</div>
+					<div class="navlinks flex-all-between">
+						<div class="navlink"><a href="">Cryptocurrencies</a></div>
+						<div class="navlink"><a href="">Exchanges</a></div>
+						<div class="navlink"><a href="">Community</a></div>
+						<div class="navlink"><a href="">Trades</a></div>
+					</div>
+					<div class="navSearch">
+						<svg
+							width="24"
+							height="25"
+							viewBox="0 0 24 25"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								id="Vector"
+								d="M23.6057 22.5272L19.0739 18.0087C20.536 16.1459 21.3294 13.8456 21.3265 11.4774C21.3265 9.36846 20.7011 7.30683 19.5294 5.55327C18.3577 3.79971 16.6923 2.43298 14.7439 1.6259C12.7954 0.818829 10.6514 0.607662 8.58294 1.0191C6.51448 1.43055 4.61447 2.44612 3.12319 3.9374C1.63191 5.42868 0.616339 7.32869 0.204896 9.39715C-0.206547 11.4656 0.00462018 13.6096 0.811695 15.5581C1.61877 17.5065 2.9855 19.1719 4.73906 20.3436C6.49262 21.5153 8.55425 22.1407 10.6632 22.1407C13.0313 22.1436 15.3317 21.3502 17.1945 19.8881L21.713 24.4199C21.8369 24.5449 21.9843 24.644 22.1468 24.7117C22.3092 24.7794 22.4834 24.8142 22.6594 24.8142C22.8353 24.8142 23.0095 24.7794 23.172 24.7117C23.3344 24.644 23.4818 24.5449 23.6057 24.4199C23.7307 24.296 23.8298 24.1486 23.8975 23.9862C23.9652 23.8238 24 23.6495 24 23.4736C24 23.2976 23.9652 23.1234 23.8975 22.961C23.8298 22.7985 23.7307 22.6511 23.6057 22.5272ZM2.66581 11.4774C2.66581 9.8957 3.13485 8.34948 4.01362 7.03431C4.89239 5.71914 6.14142 4.69409 7.60275 4.08879C9.06409 3.48348 10.6721 3.32511 12.2235 3.63369C13.7748 3.94227 15.1998 4.70395 16.3183 5.82241C17.4367 6.94087 18.1984 8.36588 18.507 9.91722C18.8156 11.4686 18.6572 13.0766 18.0519 14.5379C17.4466 15.9993 16.4215 17.2483 15.1064 18.1271C13.7912 19.0058 12.245 19.4749 10.6632 19.4749C8.54219 19.4749 6.50801 18.6323 5.0082 17.1325C3.5084 15.6327 2.66581 13.5985 2.66581 11.4774Z"
+								fill="white"
+							/>
+						</svg>
+						<button class="toggleMenu">≡</button>
+					</div>
+				</div>
+			</header>
+			<!-- Navbar ends -->
+
+			<!-- Coin Table start -->
+			<section class="herotableSection">
+				<div class="heroTitle">
+					<p>Today's Cryptocurrency Prices By Market Cap</p>
+				</div>
+				<div class="heroSubtitle">
+					<p>
+						The global cryptocurrency market cap today is
+						<span class="greenHighlight">$811.7B</span>, a
+						<span class="redHighlight"
+							><svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="16"
+								height="17"
+								viewBox="0 0 16 17"
+								fill="none"
+							>
+								<path
+									d="M6.85796 1.0625L6.85796 13.6638L1.87555 9.80687C1.75999 9.71758 1.62666 9.65031 1.48315 9.60893C1.33963 9.56754 1.18876 9.55284 1.03914 9.56567C0.736963 9.59157 0.458233 9.72802 0.264264 9.945C0.0702944 10.162 -0.0230255 10.4417 0.00483513 10.7227C0.0326958 11.0036 0.179454 11.2628 0.412823 11.4431L7.26935 16.7556C7.32389 16.7914 7.38118 16.8233 7.44076 16.8512C7.4979 16.8513 7.53219 16.9044 7.58932 16.9256C7.72035 16.9738 7.85983 16.999 8.00071 17C8.1416 16.999 8.28108 16.9738 8.41211 16.9256C8.46924 16.9256 8.50353 16.8725 8.56066 16.8512C8.62025 16.8233 8.67754 16.7914 8.73208 16.7556L15.5886 11.4431C15.7176 11.3432 15.8213 11.2181 15.8924 11.0767C15.9635 10.9353 16.0003 10.7811 16 10.625C16.0005 10.3767 15.9075 10.1362 15.7372 9.945C15.6412 9.83741 15.5234 9.74848 15.3905 9.68329C15.2575 9.61811 15.112 9.57795 14.9623 9.56512C14.8127 9.55229 14.6617 9.56704 14.5182 9.60852C14.3747 9.65001 14.2414 9.71741 14.1259 9.80687L9.14347 13.6638L9.14347 1.0625C9.14347 0.780707 9.02307 0.510457 8.80876 0.311199C8.59446 0.111942 8.30379 0 8.00071 0C7.69764 0 7.40697 0.111942 7.19267 0.311199C6.97836 0.510457 6.85796 0.780707 6.85796 1.0625Z"
+									fill="#FF0000"
+								/>
+							</svg>
+							0.17%</span
+						>
+						decrease in the last 24 hours.
+					</p>
+				</div>
+
+				<!-- coin chart start -->
+				<div class="heroCoinChart text-center">
+					<table class="coinTable text-center color-white">
+						<tr class="chartcolHeadings">
+							<th class="text-left">Name</th>
+							<th>Price</th>
+							<th>24h Change</th>
+							<th>Chart</th>
+							<th>Marketcap</th>
+						</tr>
+						<tr>
+							<td class="text-left coinName">
+								<span><img src="./assests/bitcoin.png" /></span>Bitcoin
+								<span class="shortName">BTC</span>
+							</td>
+							<td class="cointPrice">$3625.24</td>
+							<td class="coinchange greenHighlight">+2.4%</td>
+							<td class="coinChart"><img src="./assests/chartbull.svg" /></td>
+							<td class="coinCap">$320,893,271,955</td>
+						</tr>
+						<tr>
+							<td class="text-left coinName">
+								<span><img src="./assests/eth.png" /></span>Ethereum
+								<span class="shortName">ETH</span>
+							</td>
+							<td class="cointPrice">$1218.18</td>
+							<td class="coinchange redHighlight">-0.7%</td>
+							<td class="coinChart"><img src="./assests/chartbear.png" /></td>
+							<td class="coinCap">$148,563,792,762</td>
+						</tr>
+						<tr>
+							<td class="text-left coinName">
+								<span><img src="./assests/Shiba_Inu.png" /></span>ShibuInu
+								<span class="shortName">Shibu</span>
+							</td>
+							<td class="cointPrice">$0.001</td>
+							<td class="coinchange greenHighlight">+1.2%</td>
+							<td class="coinChart"><img src="./assests/chartbull.svg" /></td>
+							<td class="coinCap">$4,498,804,882</td>
+						</tr>
+						<tr>
+							<td class="text-left coinName">
+								<span><img src="./assests/bitcoin.png" /></span>Bitcoin
+								<span class="shortName">BTC</span>
+							</td>
+							<td class="cointPrice">$3625.24</td>
+							<td class="coinchange greenHighlight">+2.4%</td>
+							<td class="coinChart"><img src="./assests/chartbull.svg" /></td>
+							<td class="coinCap">$320,893,271,955</td>
+						</tr>
+						<tr>
+							<td class="text-left coinName">
+								<span><img src="./assests/eth.png" /></span>Ethereum
+								<span class="shortName">ETH</span>
+							</td>
+							<td class="cointPrice">$1218.18</td>
+							<td class="coinchange redHighlight">-0.7%</td>
+							<td class="coinChart"><img src="./assests/chartbear.png" /></td>
+							<td class="coinCap">$148,563,792,762</td>
+						</tr>
+						<tr>
+							<td class="text-left coinName">
+								<span><img src="./assests/Shiba_Inu.png" /></span>ShibuInu
+								<span class="shortName">Shibu</span>
+							</td>
+							<td class="cointPrice">$0.001</td>
+							<td class="coinchange greenHighlight">+1.2%</td>
+							<td class="coinChart"><img src="./assests/chartbull.svg" /></td>
+							<td class="coinCap">$4,498,804,882</td>
+						</tr>
+						<tr>
+							<td class="text-left coinName">
+								<span><img src="./assests/bitcoin.png" /></span>Bitcoin
+								<span class="shortName">BTC</span>
+							</td>
+							<td class="cointPrice">$3625.24</td>
+							<td class="coinchange greenHighlight">+2.4%</td>
+							<td class="coinChart"><img src="./assests/chartbull.svg" /></td>
+							<td class="coinCap">$320,893,271,955</td>
+						</tr>
+						<tr>
+							<td class="text-left coinName">
+								<span><img src="./assests/eth.png" /></span>Ethereum
+								<span class="shortName">ETH</span>
+							</td>
+							<td class="cointPrice">$1218.18</td>
+							<td class="coinchange redHighlight">-0.7%</td>
+							<td class="coinChart"><img src="./assests/chartbear.png" /></td>
+							<td class="coinCap">$148,563,792,762</td>
+						</tr>
+						<tr>
+							<td class="text-left coinName">
+								<span><img src="./assests/Shiba_Inu.png" /></span>ShibuInu
+								<span class="shortName">Shibu</span>
+							</td>
+							<td class="cointPrice">$0.001</td>
+							<td class="coinchange greenHighlight">+1.2%</td>
+							<td class="coinChart"><img src="./assests/chartbull.svg" /></td>
+							<td class="coinCap">$4,498,804,882</td>
+						</tr>
+					</table>
+				</div>
+				<div class="text-center">
+					<button class="cartViewBtn">View All</button>
+				</div>
+				<!-- coin chart end -->
+			</section>
+			<!-- Coin Table end -->
+
+			<!-- map section start -->
+			<section class="mapSection">
+				<div class="mapWrapper flex-all-between">
+					<div class="mapImage">
+						<img src="./assests/map.png" />
+					</div>
+					<div class="mapContent color-white">
+						<h2>We are the most trusted Cryptocurrency Platform</h2>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+							vulputate libero et velit interdum, ac aliquet odio mattis.
+						</p>
+						<div class="mapbulletContent">
+							<div class="bulletWrapper">
+								<div class="bulletImage">
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										width="80"
+										height="80"
+										viewBox="0 0 80 80"
+										fill="none"
+									>
+										<rect width="80" height="80" fill="#0F1535" />
+										<path
+											d="M54.7991 39.289C53.8395 37.7037 48.5616 29.749 39.5952 30.0061C31.3035 30.206 26.5054 37.1468 25.2009 39.289C25.0693 39.5061 25 39.7524 25 40.003C25 40.2537 25.0693 40.5 25.2009 40.7171C26.1455 42.2738 31.1985 50 40.03 50H40.4048C48.6965 49.8001 53.5096 42.8593 54.7991 40.7171C54.9307 40.5 55 40.2537 55 40.003C55 39.7524 54.9307 39.5061 54.7991 39.289ZM40.3299 47.1437C33.8674 47.2865 29.6541 42.0167 28.3346 40.003C29.834 37.7037 33.7475 33.0052 39.7451 32.8624C46.1775 32.7053 50.4059 37.9894 51.7403 40.003C50.1959 42.3023 46.3275 47.0009 40.3299 47.1437Z"
+											fill="#FF696A"
+										/>
+										<path
+											d="M40 35.0046C38.962 35.0046 37.9474 35.2977 37.0844 35.847C36.2214 36.3962 35.5487 37.1769 35.1515 38.0902C34.7543 39.0036 34.6504 40.0086 34.8529 40.9782C35.0554 41.9478 35.5552 42.8384 36.2892 43.5375C37.0231 44.2365 37.9582 44.7126 38.9762 44.9055C39.9942 45.0983 41.0493 44.9994 42.0083 44.621C42.9672 44.2427 43.7868 43.602 44.3635 42.78C44.9401 41.9581 45.2479 40.9916 45.2479 40.003C45.2479 38.6774 44.695 37.406 43.7108 36.4686C42.7266 35.5312 41.3918 35.0046 40 35.0046ZM40 42.1452C39.5552 42.1452 39.1203 42.0196 38.7505 41.7842C38.3806 41.5488 38.0923 41.2143 37.9221 40.8228C37.7519 40.4314 37.7073 40.0007 37.7941 39.5851C37.8809 39.1696 38.0951 38.7879 38.4096 38.4883C38.7242 38.1887 39.1249 37.9847 39.5612 37.902C39.9975 37.8193 40.4497 37.8618 40.8607 38.0239C41.2717 38.186 41.6229 38.4606 41.8701 38.8129C42.1172 39.1652 42.2491 39.5794 42.2491 40.003C42.2491 40.5712 42.0121 41.1161 41.5903 41.5178C41.1686 41.9196 40.5965 42.1452 40 42.1452Z"
+											fill="#FF696A"
+										/>
+									</svg>
+								</div>
+								<div class="bulletContent">
+									<h4>Clarity</h4>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit.Nunc
+										vulputate
+									</p>
+								</div>
+							</div>
+							<div class="bulletWrapper">
+								<div class="bulletImage">
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										width="80"
+										height="80"
+										viewBox="0 0 80 80"
+										fill="none"
+									>
+										<rect width="80" height="80" fill="#0F1535" />
+										<path
+											d="M38.4166 40.6322L35.7187 37.8572L34.25 39.3679L38.4166 43.6536L46.75 35.0822L45.2812 33.5714L38.4166 40.6322Z"
+											fill="#88ECA6"
+										/>
+										<path
+											d="M40.5 55L34.0669 51.4719C32.2328 50.4683 30.699 48.97 29.6302 47.1377C28.5613 45.3054 27.9978 43.2083 28 41.0714V27.1429C28.0006 26.5747 28.2203 26.03 28.6108 25.6283C29.0014 25.2266 29.531 25.0006 30.0833 25H50.9167C51.469 25.0006 51.9986 25.2266 52.3892 25.6283C52.7797 26.03 52.9994 26.5747 53 27.1429V41.0714C53.0022 43.2083 52.4387 45.3054 51.3698 47.1377C50.301 48.97 48.7672 50.4683 46.9331 51.4719L40.5 55ZM30.0833 27.1429V41.0714C30.0815 42.8198 30.5427 44.5357 31.4172 46.0349C32.2918 47.5341 33.5468 48.76 35.0475 49.581L40.5 52.5714L45.9525 49.581C47.4532 48.76 48.7082 47.5341 49.5828 46.0349C50.4573 44.5357 50.9185 42.8198 50.9167 41.0714V27.1429H30.0833Z"
+											fill="#88ECA6"
+										/>
+									</svg>
+								</div>
+								<div class="bulletContent">
+									<h4>Confidence</h4>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit.Nunc
+										vulputate
+									</p>
+								</div>
+							</div>
+							<div class="bulletWrapper">
+								<div class="bulletImage">
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										width="80"
+										height="80"
+										viewBox="0 0 80 80"
+										fill="none"
+									>
+										<rect width="80" height="80" fill="#0F1535" />
+										<path
+											d="M40.4166 39.7596C42.6667 39.7596 44.4167 37.7781 44.4167 35.3461C44.4167 32.9142 42.5833 31.0228 40.3333 31.0228C38.0833 31.0228 36.3333 33.0043 36.3333 35.3461C36.3333 37.7781 38.1666 39.7596 40.4166 39.7596ZM40.3333 32.8242C40.4166 32.8242 40.4166 32.8242 40.3333 32.8242C41.6667 32.8242 42.75 33.9951 42.75 35.4362C42.75 36.8773 41.6667 37.9582 40.3333 37.9582C39 37.9582 38 36.7873 38 35.4362C38 33.9951 39.0833 32.8242 40.3333 32.8242Z"
+											fill="#6687FA"
+										/>
+										<path
+											d="M52.75 39.2192C51.1667 37.688 49.0833 36.8774 46.9167 36.9675C46.6667 36.9675 46.5 36.9675 46.25 36.9675C46.0833 37.688 45.8333 38.3185 45.5 38.8589C46 38.7689 46.4167 38.7689 46.9167 38.7689C48.5 38.6788 50.0833 39.2192 51.3333 40.21V46.6951H53V39.4894L52.75 39.2192Z"
+											fill="#6687FA"
+										/>
+										<path
+											d="M45 31.203C45.4167 30.1221 46.5833 29.5817 47.6667 30.032C48.6667 30.4824 49.1667 31.7434 48.75 32.9143C48.4167 33.7249 47.6667 34.2654 46.9167 34.2654C46.75 34.2654 46.5 34.2654 46.3333 34.1753C46.4167 34.6256 46.4167 35.076 46.4167 35.4363V35.9767C46.5833 35.9767 46.75 36.0668 46.9167 36.0668C49 36.0668 50.6667 34.2654 50.6667 32.1037C50.6667 29.8519 49 28.0505 47 28.0505C45.6667 28.0505 44.5 28.7711 43.8333 30.032C44.25 30.3023 44.6667 30.6625 45 31.203Z"
+											fill="#6687FA"
+										/>
+										<path
+											d="M35.5 38.949C35.1667 38.4086 34.9167 37.7781 34.75 37.0575C34.5 37.0575 34.3333 37.0575 34.0833 37.0575C31.9167 36.9674 29.8333 37.7781 28.25 39.2192L28 39.4894V46.6951H29.6667V40.21C31 39.2192 32.5 38.6788 34.0833 38.7689C34.5833 38.7689 35.0833 38.8589 35.5 38.949Z"
+											fill="#6687FA"
+										/>
+										<path
+											d="M34.0833 35.9767C34.25 35.9767 34.4166 35.9767 34.5833 35.8866C34.5833 35.7065 34.5833 35.5263 34.5833 35.3462C34.5833 34.8958 34.5833 34.4455 34.6667 34.0852C34.5 34.1753 34.25 34.1753 34.0833 34.1753C33 34.1753 32.0833 33.1845 32.0833 32.0136C32.0833 30.8426 33 29.8519 34.0833 29.8519C34.9167 29.8519 35.6667 30.3923 36 31.2029C36.3333 30.7526 36.8333 30.3022 37.25 29.9419C36.1667 28.0505 33.9166 27.42 32.1666 28.5909C30.4166 29.7618 29.8333 32.1937 30.9166 34.0852C31.5833 35.2561 32.75 35.9767 34.0833 35.9767Z"
+											fill="#6687FA"
+										/>
+										<path
+											d="M47.25 44.6234L47.0833 44.3532C45.4167 42.3717 43.0833 41.2007 40.5833 41.2908C38.0833 41.2007 35.6667 42.3717 34 44.3532L33.8333 44.6234V51.4688C33.8333 52.2794 34.4167 53 35.25 53H45.9167C46.6667 53 47.3334 52.2794 47.3334 51.4688V44.6234H47.25ZM45.5833 51.1986H35.5V45.2539C36.8333 43.8128 38.6667 43.0922 40.5833 43.0922C42.4167 43.0022 44.25 43.8128 45.5833 45.2539V51.1986Z"
+											fill="#6687FA"
+										/>
+									</svg>
+								</div>
+								<div class="bulletContent">
+									<h4>Community</h4>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit.Nunc
+										vulputate
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- map section end -->
+
+			<!-- invest section start -->
+			<section class="investSection">
+				<div class="investWrapper flex-all-between">
+					<div class="investContent color-white">
+						<h2>Reason to invest in Cryptocurrency in 2022</h2>
+						<div class="investBullets">
+							<div class="investBulletWrapper">
+								<div class="investcheckicon">
+									<img src="./assests/checkbox.png" />
+								</div>
+								<div class="investbulletContent">
+									<h4>Buying Bitcoin in legal</h4>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+										Nunc vulputate libero et velit interdum, ac aliquet odio
+										mattis. Class aptent taciti sociosqu ad.
+									</p>
+								</div>
+							</div>
+							<div class="investBulletWrapper">
+								<div class="investcheckicon">
+									<img src="./assests/checkbox.png" />
+								</div>
+								<div class="investbulletContent">
+									<h4>High return potential</h4>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+										Nunc vulputate libero et velit interdum, ac aliquet odio
+										mattis. Class aptent taciti sociosqu ad.
+									</p>
+								</div>
+							</div>
+							<div class="investBulletWrapper">
+								<div class="investcheckicon">
+									<img src="./assests/checkbox.png" />
+								</div>
+								<div class="investbulletContent">
+									<h4>Growing alternative assest class</h4>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+										Nunc vulputate libero et velit interdum, ac aliquet odio
+										mattis. Class aptent taciti sociosqu ad.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="portfolioStats color-white">
+						<div class="pfcoincard">
+							<div class="portfolioPercentage">
+								<h3>
+									Your portfolio is <span class="greenHighlight">up 2.13%</span>
+								</h3>
+							</div>
+							<div class="portfolioCoins">
+								<div class="pfcoinWrapper flex-all-between">
+									<div class="pfinfo flex-all-between">
+										<div class="pfcoinIcon">
+											<img src="./assests/bitcoinpf.png" />
+										</div>
+										<div class="pfcoinName">
+											<p>Bitcoin</p>
+											<p>BTC</p>
+										</div>
+									</div>
+
+									<div class="pfcoinchange greenHighlight">1.33%</div>
+								</div>
+								<div class="pfcoinWrapper flex-all-between">
+									<div class="pfinfo flex-all-between">
+										<div class="pfcoinIcon">
+											<img src="./assests/ethpf.png" />
+										</div>
+										<div class="pfcoinName">
+											<p>Ethereum</p>
+											<p>ETH</p>
+										</div>
+									</div>
+									<div class="pfcoinchange greenHighlight">2.14%</div>
+								</div>
+								<div class="pfcoinWrapper flex-all-between">
+									<div class="pfinfo flex-all-between">
+										<div class="pfcoinIcon">
+											<img src="./assests/litecoinpf.png" />
+										</div>
+										<div class="pfcoinName">
+											<p>Litecoin</p>
+											<p>LTC</p>
+										</div>
+									</div>
+
+									<div class="pfcoinchange greenHighlight">0.88%</div>
+								</div>
+								<div class="pfcoinWrapper flex-all-between">
+									<div class="pfinfo flex-all-between">
+										<div class="pfcoinIcon">
+											<img src="./assests/bitcoinpf.png" />
+										</div>
+										<div class="pfcoinName">
+											<p>Bitcoin</p>
+											<p>BTC</p>
+										</div>
+									</div>
+
+									<div class="pfcoinchange greenHighlight">1.33%</div>
+								</div>
+								<div class="pfcoinWrapper flex-all-between">
+									<div class="pfinfo flex-all-between">
+										<div class="pfcoinIcon">
+											<img src="./assests/ethpf.png" />
+										</div>
+										<div class="pfcoinName">
+											<p>Ethereum</p>
+											<p>ETH</p>
+										</div>
+									</div>
+									<div class="pfcoinchange greenHighlight">2.14%</div>
+								</div>
+								<div class="pfcoinWrapper flex-all-between">
+									<div class="pfinfo flex-all-between">
+										<div class="pfcoinIcon">
+											<img src="./assests/litecoinpf.png" />
+										</div>
+										<div class="pfcoinName">
+											<p>Litecoin</p>
+											<p>LTC</p>
+										</div>
+									</div>
+
+									<div class="pfcoinchange greenHighlight">0.88%</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- invest section end -->
+
+			<!-- Footer Start -->
+			<footer class="footer">
+				<div class="footerWrapper color-white">
+					<div class="footerAbout">
+						<div class="footerLogo">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="285"
+								height="34"
+								viewBox="0 0 285 34"
+								fill="none"
+							>
+								<path
+									d="M31.423 0.105135C29.9907 0.433327 29.6111 2.36491 31.0004 3.00163C31.901 3.4144 33.2526 3.2474 34.2406 3.42812C36.1671 3.78049 37.9433 4.40773 39.594 5.3828C47.3559 9.96808 48.5992 19.6178 42.6621 25.8967C38.3492 30.4575 30.8133 31.7254 24.9429 29.0597C23.2979 28.3128 21.835 27.2347 20.5796 26.0247C19.7707 25.2448 18.9886 24.1956 17.6172 24.699C14.7763 25.7419 18.6748 28.893 19.7304 29.6853C23.2786 32.3483 28.1832 33.9829 32.8322 33.5627C44.1968 32.5354 51.8509 22.9635 49.4007 12.8464C47.993 7.03222 42.7018 2.09982 36.3539 0.645341C34.9241 0.317716 32.8896 -0.230975 31.423 0.105135ZM0.993189 0.371679C-0.541118 0.876033 -0.180783 2.97924 1.27496 3.32507C2.98756 3.73192 5.28027 3.37838 7.05102 3.37838H19.1669C20.7104 3.37838 23.9323 3.93086 25.213 3.05853C26.2757 2.33473 25.886 0.490629 24.5203 0.318358C22.8053 0.102029 20.8997 0.307697 19.1669 0.307697H3.24729C2.56785 0.307697 1.63854 0.159544 0.993189 0.371679ZM29.4506 7.08874C29.4506 7.87944 29.7859 9.45784 29.3488 10.1487C28.9752 10.7393 27.7648 11.1006 27.1964 11.5774C25.6703 12.8579 24.8015 14.9387 24.8015 16.8125C24.8015 18.7185 25.6721 20.7382 27.1964 22.0546C27.7704 22.5502 28.9433 22.9078 29.3488 23.4975C29.7933 24.1442 29.4506 25.7786 29.4506 26.5362H31.0003L31.1411 23.8494L33.3952 24.1053V26.5362H34.9449V23.8493C36.6065 23.7732 38.0401 22.8295 39.1712 21.8023V21.6743C38.7563 21.2975 38.0884 20.4018 37.4807 20.3237C36.8938 20.2485 36.0496 21.1646 35.5083 21.3864C34.3072 21.8789 32.8156 21.9275 31.5637 21.5855C26.5162 20.206 26.5173 13.4291 31.5637 12.0396C32.8438 11.6871 34.2822 11.7676 35.5083 12.26C36.0479 12.4766 36.898 13.3761 37.4807 13.3014C38.0884 13.2233 38.7563 12.3276 39.1712 11.9508V11.8228C38.0167 10.7788 36.6005 9.93359 34.9449 9.77575V7.08893H33.3952C33.3952 7.65482 33.6959 9.21723 33.0978 9.55543C32.6464 9.81058 31.6801 9.68323 31.1411 9.77577L31.0002 7.08895L29.4506 7.08874ZM64.8114 7.77842C62.8343 8.07351 60.9606 8.43993 59.3171 9.57322C54.7643 12.7126 54.1309 19.5234 58.3427 23.1819C61.678 26.0785 67.1423 26.5494 71.1507 24.5857C71.7021 24.3156 73.5257 23.4054 73.2875 22.6985C73.157 22.3116 72.5892 22.0469 72.2778 21.7922C71.9877 21.5549 71.5838 20.9926 71.1507 20.9926C70.6523 20.9926 70.0143 21.7588 69.601 22.002C68.6409 22.5671 67.4909 22.8416 66.3608 22.9438C61.339 23.3978 57.9837 18.5578 59.5517 14.5101C60.7708 11.3629 64.8192 9.90288 68.1924 10.8885C68.9445 11.1083 70.8874 12.6975 71.4327 12.4168C71.8428 12.2056 73.311 11.1164 73.311 10.6718C73.311 9.99948 71.848 9.27484 71.2918 8.98719C69.441 8.03003 66.9442 7.4601 64.8114 7.77842ZM84.3933 7.7788C82.2702 8.09571 80.3315 8.56823 78.6173 9.82588C74.0577 13.1713 74.0264 19.9408 78.3355 23.4557C80.7974 25.4638 84.3067 26.0482 87.4929 25.613C88.9347 25.4159 90.3521 24.9497 91.5785 24.2304C100.306 19.1116 94.5561 6.26161 84.3933 7.7788ZM252.6 7.77926C250.563 8.08335 248.62 8.48691 246.965 9.69842C242.107 13.2518 242.107 20.247 246.965 23.8005C249.377 25.5653 252.716 26.0208 255.7 25.613C257.082 25.4242 258.472 24.9667 259.644 24.2766C268.315 19.173 262.893 6.24317 252.6 7.77926ZM99.7436 7.98478V25.5134H103.266V7.98478H99.7436ZM108.478 7.98478V25.5134H112V13.7423L119.553 22.0589L122.621 25.421L125.666 25.5133V7.98475H122.144V19.7559L119.741 17.197L114.45 11.3115L111.437 8.07738L108.478 7.98478ZM130.878 7.98498V25.5136H134.4V7.98498H130.878ZM139.613 7.98498V25.5136H143.135V13.7425L150.546 21.9306L153.732 25.4207L156.659 25.5131V7.9845H153.137V19.7556L145.679 11.439L142.567 8.07691L139.613 7.98498ZM159.477 7.98451V10.6713H165.816V25.5131H169.338V14.6381C169.338 13.8448 168.896 11.415 169.526 10.8424C169.875 10.5255 170.719 10.6719 171.17 10.6719H175.819V7.98502L159.477 7.98451ZM178.495 7.98502V25.5136H193.005V22.8268H184.975L182.204 22.6562L182.017 21.4194V17.9649H191.315V15.2781H182.017V12.0795L182.204 10.8427L184.975 10.6722H192.583V7.98537L178.495 7.98502ZM196.951 7.98537V25.514H200.473V13.7429L203.204 16.6856L208.248 22.3152L211.179 25.4214L214.138 25.5138V7.98519H210.616V19.7563L208.212 17.1974L202.594 10.9282L199.909 8.07782L196.951 7.98537ZM216.815 7.98542V10.6722H223.154V25.514H226.817V10.6722H233.157V7.98542H216.815ZM235.833 7.98542V25.514H239.496V7.98542H235.833ZM267.813 7.98542V25.514H271.335V13.7429L274.207 16.8136L279.251 22.4431L282.042 25.4214L285 25.5138V7.98517H281.478V19.7563L273.597 11.0558L270.857 8.07757L267.813 7.98542ZM5.21196 8.81684C3.64296 9.29626 4.02839 11.4345 5.49371 11.7702C6.64598 12.0342 8.11131 11.8235 9.29743 11.8235H17.0458C18.2542 11.8235 20.1951 12.1568 21.2682 11.5782C22.4384 10.9475 22.2324 9.04706 20.8495 8.7848C19.7584 8.57788 18.4421 8.75281 17.3276 8.75281H10.0019C8.5933 8.75281 6.54768 8.40869 5.21196 8.81684ZM84.8084 10.5724C91.3599 9.74607 95.0657 17.9697 89.8801 21.622C88.7902 22.3895 87.4436 22.8205 86.0763 22.9442C80.196 23.4756 76.5379 17.0293 80.0773 12.8474C81.2311 11.4837 82.9799 10.8031 84.8084 10.5724ZM253.015 10.5728C259.321 9.7775 262.835 17.1623 258.639 21.1599C257.485 22.2589 255.77 22.7969 254.142 22.9442C248.522 23.4521 245.057 17.5535 247.857 13.3589C248.988 11.6636 250.931 10.8356 253.015 10.5728ZM9.85689 16.7459C8.49713 17.1213 8.30893 18.9998 9.57512 19.5927C10.1542 19.8638 10.9173 19.7562 11.5475 19.7562C13.1577 19.7562 15.6865 20.1914 17.1826 19.646C18.53 19.1548 18.6245 17.2235 17.1826 16.7495C16.574 16.5494 15.7095 16.6855 15.0694 16.6855C13.5077 16.6855 11.3512 16.3334 9.85689 16.7459Z"
+									fill="#FBC315"
+								/>
+							</svg>
+						</div>
+						<div class="footerAboutContent">
+							<p>
+								CoinIntention's mission is to make investing in cryptocurrencies
+								easy and efficient. CoinIntention tracks various data of
+								cryptocurrencies and thus offers its users an overview of all
+								cryptocurrencies available on the market and their performance,
+								market capitalization, trading volume, etc.
+							</p>
+						</div>
+					</div>
+					<div class="companyWideLinks">
+						<p>Company</p>
+						<ul>
+							<li><a href="">About us</a></li>
+							<li><a href="">Terms of use</a></li>
+							<li><a href="">Privacy Policy</a></li>
+							<li><a href="">Community Rules</a></li>
+							<li><a href="">Disclaimer</a></li>
+							<li><a href="">Methodology</a></li>
+						</ul>
+					</div>
+					<div class="companyWideLinks">
+						<p>Support</p>
+						<ul>
+							<li><a href="">Requested Form</a></li>
+							<li><a href="">Contact Support</a></li>
+							<li><a href="">FAQ's</a></li>
+							<li><a href="">Glossary</a></li>
+						</ul>
+					</div>
+					<div class="companyWideLinks">
+						<p>Socials</p>
+						<ul>
+							<li><a href="">Facebook</a></li>
+							<li><a href="">Instagram</a></li>
+							<li><a href="">Twitter</a></li>
+							<li><a href="">Youtube</a></li>
+							<li><a href="">Telegram</a></li>
+						</ul>
+					</div>
+				</div>
+			</footer>
+			<!-- Footer End -->
+		</div>
+	</body>
+</html>
