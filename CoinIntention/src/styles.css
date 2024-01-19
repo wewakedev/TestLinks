@@ -1,0 +1,372 @@
+body {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+	position: relative;
+}
+p {
+	margin: 0px;
+}
+a {
+	text-decoration: none;
+}
+.color-white {
+	color: #fff;
+}
+.greenHighlight {
+	color: #14ff00;
+}
+.redHighlight {
+	color: #f00;
+}
+.flex-all-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.flex-all-between {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.text-center {
+	text-align: center;
+}
+.text-left {
+	text-align: left;
+}
+.text-right {
+	text-align: right;
+}
+/* Navbar */
+.mobileNav {
+	display: none;
+}
+.mobileNav.show {
+	position: absolute;
+	background: #00092af5;
+	width: 100vw;
+	height: 100vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+button.closeMenu {
+	background: transparent;
+	border: none;
+	position: absolute;
+	top: 5%;
+	right: 12%;
+	font-size: 60px;
+	color: #fff;
+	font-weight: 400;
+}
+.mobileNavWrapper .navlink {
+	margin: 20px auto;
+	font-size: 30px;
+}
+.mobileNavWrapper .navlink a {
+	color: #fff;
+}
+.navbar {
+	background: #00092a;
+	height: 100px;
+}
+.navContainer {
+	width: 80%;
+}
+.navlogo {
+	width: auto;
+}
+.navlinks {
+	width: 40%;
+}
+.navlinks .navlink a {
+	color: #fff;
+	font-size: 15px;
+	font-weight: 500;
+}
+.navlinks .navlink a:hover {
+	color: #fbc315;
+}
+.navSearch button.toggleMenu {
+	display: none;
+}
+
+/* hero-chart-section */
+.herotableSection {
+	background: #041334;
+	padding: 80px 100px;
+}
+.heroTitle p {
+	color: #fff;
+	font-size: 24px;
+	font-weight: 500;
+	margin-bottom: 20px;
+}
+.heroSubtitle p {
+	color: #fff;
+	font-size: 20px;
+	font-weight: 500;
+}
+
+.heroCoinChart {
+	margin: 65px auto;
+}
+.herotableSection .cartViewBtn {
+	width: 200px;
+	height: 60px;
+	border-radius: 8px;
+	border: none;
+	margin: 15px auto;
+	color: #fff;
+	font-size: 24px;
+	font-weight: 700;
+	cursor: pointer;
+	background: linear-gradient(90deg, #3dd8ee 0%, #0997e8 100%);
+}
+.heroCoinChart .cartViewBtn:hover {
+	box-shadow: 1px 1px 5px #3dd8ee;
+}
+.coinTable {
+	width: 100%;
+	color: #fff;
+	font-size: 20px;
+	font-weight: 700;
+	border-collapse: separate;
+	border-spacing: 30px;
+}
+.coinName {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 10px;
+}
+.coinName span.shortName {
+	color: #858585;
+	font-size: 16px;
+	font-weight: 400;
+}
+
+table.coinTable tr.chartcolHeadings {
+	margin-bottom: 37px;
+}
+/* table.coinTable tr td:nth-child(1) {
+	width: 60%;
+} */
+
+/* map section */
+.mapSection {
+	background: #00092a;
+}
+.mapWrapper {
+	width: 80%;
+	margin: 0px auto;
+	padding: 50px 0px;
+}
+.mapWrapper .mapImage {
+	width: 60%;
+}
+.mapWrapper .mapContent {
+	width: 40%;
+}
+.mapWrapper .mapImage img {
+	width: 100%;
+}
+.mapbulletContent {
+	margin: 20px auto;
+}
+.bulletWrapper,
+.investBulletWrapper {
+	margin: 30px auto;
+	display: flex;
+	align-items: self-start;
+}
+.bulletImage {
+	margin-right: 16px;
+}
+.bulletContent h4,
+.investBulletWrapper h4 {
+	margin-bottom: 3px;
+	margin-top: 0px;
+}
+.investBulletWrapper h4 {
+	font-size: 20px;
+}
+.bulletContent p {
+	color: #fff;
+	font-family: Poppins;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+}
+
+/* invest section */
+
+.investContent h2 {
+	color: #fff;
+	font-family: Poppins;
+	font-size: 36px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+	margin-top: 0px;
+}
+.investBulletWrapper h4 {
+	font-size: 20px;
+	color: #fff;
+	font-weight: 500;
+}
+
+section.investSection {
+	background: #041334;
+}
+
+.investWrapper {
+	width: 80%;
+	margin: 0px auto;
+	padding: 80px 0px;
+}
+.investcheckicon {
+	margin-right: 15px;
+}
+.investSection .investContent {
+	width: 45%;
+}
+.investSection .portfolioStats {
+	width: 55%;
+	background: url(./assests/pfbackground.png);
+}
+.investSection .portfolioStats .pfcoincard {
+	max-width: 365px;
+	height: 532px;
+	margin: 0px auto;
+	flex-shrink: 0;
+	border-radius: 50px;
+	border: 2px solid #142346;
+	background: linear-gradient(
+		180deg,
+		rgba(4, 19, 52, 0.78) -3.16%,
+		rgba(15, 37, 84, 0.62) 99.42%
+	);
+	/* backdrop-filter: blur(1px); */
+	padding: 40px;
+}
+.pfcoinWrapper {
+	margin: 20px auto;
+}
+.pfcoinIcon {
+	margin-right: 20px;
+}
+.pfcoinchange:after {
+	content: '';
+	position: absolute;
+	width: 15px;
+	height: 20px;
+	background: url(./assests/greenupIcon.png);
+	right: -50%;
+}
+
+.pfcoinchange {
+	position: relative;
+}
+.portfolioPercentage h3 {
+	font-size: 24px;
+	font-weight: 400;
+	text-align: center;
+	margin-top: 0px;
+	padding-bottom: 10px;
+}
+
+/* Footer */
+.footer {
+	background: #00092a;
+}
+.footer ul {
+	list-style-type: none;
+	padding-left: 0px;
+}
+.footerAbout {
+	width: 40%;
+}
+.footerWrapper {
+	width: 80%;
+	padding: 70px 0px;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	margin: 0px auto;
+}
+.footer ul li a {
+	color: #fff;
+	font-size: 16px;
+	font-weight: 400;
+}
+.footer ul li a:hover {
+	color: #fbc315;
+}
+.footer .companyWideLinks p {
+	font-size: 24px;
+	font-weight: 400;
+}
+.footer ul li {
+	margin-bottom: 10px;
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 1200px) {
+	.navlinks {
+		display: none;
+	}
+	.navSearch {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.navSearch button.toggleMenu {
+		margin: 0px 10px;
+		display: block;
+		background: transparent;
+		border: none;
+		color: #fff;
+		font-size: 40px;
+	}
+}
+
+@media only screen and (max-width: 986px) {
+	.heroCoinChart {
+		overflow: scroll;
+	}
+	.navlogo {
+		width: 50px;
+		overflow: hidden;
+	}
+	.herotableSection {
+		padding: 40px 50px;
+		text-align: center;
+	}
+	.mapWrapper,
+	.investWrapper {
+		flex-direction: column;
+	}
+	.mapWrapper .mapImage,
+	.mapWrapper .mapContent,
+	.investSection .investContent,
+	.investSection .portfolioStats,
+	.footerAbout {
+		width: 100%;
+	}
+	.footerWrapper {
+		flex-direction: column;
+		gap: 30px;
+	}
+}
+
+@media only screen and (max-width: 520px) {
+	.coinTable {
+		font-size: 18px;
+	}
+}
